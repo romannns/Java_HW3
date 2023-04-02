@@ -1,0 +1,36 @@
+public class ThirdHomework {
+    public static void main(String[] args) {
+        // Создайте две переменные isWeekend и isRain.
+        // Создайте переменную canWalk, значение которой должно быть истинным,
+        // если это выходной день (isWeekend=true) и не идет дождь (isRain=false).
+        boolean isWeekend = true;
+        boolean isRain = false;
+        boolean canWalk = isWeekend || isRain;
+        // Создайте две переменные isEdekaOpen и isReweOpen,
+        // значения которых зависят от того, открыты магазины или нет.
+        // Реализует логический метод canBuy,, возвращающий true **
+        // Значение этой переменной должно быть true, если хотя бы один магазин открыт, иначе false.
+        // Отобразите строку «Я могу купить еду, это ……» и значение.
+        boolean isEdekaOpen = true;
+        boolean isReweOpen = false;
+        System.out.println("Я могу купить еду, это " + canBuy(isEdekaOpen, isReweOpen));
+        // Представим, что у нас есть устройство, в котором две колбы.
+        // Прибор работает корректно, если температура первой колбы выше 100 градусов,
+        // а температура второй колбы меньше 100 градусов.
+        // Вы должны написать метод, который проверяет это устройство.
+        // Ваша программа должна иметь переменные Temperature1 и Temperature2.
+        // В результате он выводит сообщение true или false.
+        int Temperature1 = 110;
+        int Temperature2 = 90;
+        System.out.println(testMachine(Temperature1, Temperature2));
+    }
+    public static boolean canBuy(boolean isEdekaOpen, boolean isReweOpen){
+        boolean result = isEdekaOpen || isReweOpen;
+        return result;
+    }
+
+    public static boolean testMachine(int Temperature1, int Temperature2){
+        boolean resultTest = (Temperature1 > 100) && (Temperature2 < 100);
+        return resultTest;
+    }
+}
